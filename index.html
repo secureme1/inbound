@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=v2raytun://import/https://77.110.104.8:2096/sub/">
+    <script>
+        // Получаем имя клиента и добавляем к URL редиректа
+        const clientName = new URLSearchParams(window.location.search).get('client');
+        if (clientName) {
+            const meta = document.querySelector('meta[http-equiv="refresh"]');
+            meta.setAttribute('content', `0;url=v2raytun://import/https://77.110.104.8:2096/sub/${clientName}`);
+        } else {
+            document.write('Ошибка: не указан клиент');
+        }
+    </script>
+</head>
+<body>
+    <!-- Пусто - пользователь ничего не увидит -->
+</body>
+</html>
